@@ -36,7 +36,5 @@ function loadLetter(letter, page) {
     content.innerHTML = '<iframe src="html.html#A"></iframe>';
   } else if (letter === 'B') {
     content.innerHTML = '<iframe src="html.html#B"></iframe>';
-  } else {
-    content.innerHTML = '<h2>Letter not found</h2>';
-  }
+}
 }
