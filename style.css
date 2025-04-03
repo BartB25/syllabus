@@ -39,7 +39,7 @@ iframe {
     height: 50%;
     border: none;
     padding-top: 25px;
-    overflow: auto;
+    
 }
 
 .sidebar {
@@ -47,9 +47,10 @@ iframe {
     top: 200px;
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: auto;
     width: 250px;
     border-right: black 3px solid;
+    
 }
 
 .sidebar-letters {

@@ -1,40 +1,28 @@
-// showExternalPage.js
-
+let currentPage = 'html';
 
 function loadExternalHTML(page) {
+    const pages = {
+        html: "html.html",
+        css: "css.html",
+        tools: "tools.html",
+        about: "about.html"
+    };
 
-  if (page == 'html') {
-    document.getElementById("external-content").innerHTML = '<iframe src="html.html"> </iframe>';
-}
-  else if (page == 'css') {
-    document.getElementById("external-content").innerHTML = '<iframe src="css.html"> </iframe>';
-  }
-
-  else if (page == 'tools'){
-    document.getElementById("external-content").innerHTML = '<iframe src="tools.html"> </iframe>';
-  }
-
-  else if (page == 'about'){
-    document.getElementById("external-content").innerHTML = '<iframe src="about.html"> </iframe>';
-  }
-
-  else {
-    document.getElementById("external-content").innerHTML = "<h2>Unable to show the page...</h2>";
-  }
+    if (pages[page]) {
+        document.getElementById("external-content").innerHTML = `<iframe src="${pages[page]}" onload="currentPage='${page}'"></iframe>`;
+        currentPage = page; // Update de huidige pagina correct
+    } else {
+        document.getElementById("external-content").innerHTML = "<h2>Unable to show the page...</h2>";
+    }
 }
 
+function loadLetter(letter) {
+    let content = document.getElementById("external-content");
+    
+    if (!currentPage || !content) return;
 
-
-
-function loadLetter(letter, page) {
-  let content = document.getElementById("external-content");
-
-  if (page !== "html") return; // Ensure it only works for the "html" page
-
-  // Change iframe src to jump to the specific letter in html.html
-  if (letter === 'A') {
-    content.innerHTML = '<iframe src="html.html#A"></iframe>';
-  } else if (letter === 'B') {
-    content.innerHTML = '<iframe src="html.html#B"></iframe>';
-}
+    const validPages = ["html", "css", "tools", "about"];
+    if (validPages.includes(currentPage)) {
+        content.innerHTML = `<iframe src="${currentPage}.html#${letter}"></iframe>`;
+    }
 }
