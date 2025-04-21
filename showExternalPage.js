@@ -2,6 +2,7 @@ let currentPage = 'html';
 
 function loadExternalHTML(page) {
     const pages = {
+        home: "home.html",
         html: "html.html",
         css: "css.html",
         tools: "tools.html",

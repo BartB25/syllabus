@@ -1,14 +1,14 @@
 body {
-    /*background-color:#AA6161;*/
-    background-color: #FFF3E3;
+    background-color: #0F1924;
     margin: 0px;
+    color: white;
 }
 
 .navigation {
     position: fixed;
     width: 100vw;
-    height: 150px;
-    border-bottom: black 3px solid;
+    height: 120px;
+    border-bottom: white 2px solid;
 }
 
 .title {
@@ -26,68 +26,62 @@ h1 {
 }
 
 #external-content {
-    position: relative;
+    position: fixed;
     left: 250px;
-    top: 220px;
+    top: 180px;
     padding-left: 25px;
     width: 100vw;
-    height: auto;
+    height: 100vw;
 }
 
 iframe {
-    width: 75%;
-    height: 50%;
+    width: 100vw;
+    height:35%;
     border: none;
     padding-top: 25px;
-    
 }
 
 .sidebar {
     position: fixed;
-    top: 200px;
+    top: 170px;
     display: flex;
     flex-direction: column;
-    height: auto;
+    height: 700px;
+    overflow-y: auto;
     width: 250px;
-    border-right: black 3px solid;
-    
+    border-right: white 2px solid;
 }
 
+
+
 .sidebar-letters {
-    background-color: #E98614;
+    background-image: linear-gradient(to right, #1b3b80, #22468b, #295296, #305ea1, #386aac);
     padding-bottom: 15px;
     margin-bottom: 5px;
     margin-top: 10px;
-    border-left: black 3px solid;
-    border-bottom: black 3px solid;
-    border-top: black 3px solid;
     height: 30px;
+    width: 240px;
     font-size: 35px;
     font-family:'Times New Roman', Times, serif;
     text-align: center;
     text-decoration: none;
 }
 
-.sidebar-letters:visited {
-    color: white;
-}
-
 .sidebar-letters:hover {
-    color: #7d3807;
+    color: white;
 }
 
 .navigation {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: 50px;
 }
 
 .navs {
-    background-color: #E98614;
-    margin-left: 50px;
-    margin-right: 50px;
-    border: black 3px solid;
+    background-image: linear-gradient(to right, #1b3b80, #22468b, #295296, #305ea1, #386aac);
+    
+    
     height: 50px;
     width: 250px;
     padding-top: 15px;
@@ -98,10 +92,6 @@ iframe {
     
 }
 
-.navs:visited {
-    color: white;
-}
-
 .navs:hover {
-    color: #7d3807;
+    color: white;
 }
