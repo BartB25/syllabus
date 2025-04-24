@@ -43,11 +43,11 @@ iframe {
 
 .sidebar {
     position: fixed;
-    top: 170px;
+    top: 180px;
     display: flex;
     flex-direction: column;
     height: 700px;
-    overflow-y: auto;
+    overflow: auto;
     width: 250px;
     border-right: white 2px solid;
 }
@@ -60,7 +60,7 @@ iframe {
     margin-bottom: 5px;
     margin-top: 10px;
     height: 30px;
-    width: 240px;
+    width: 230px;
     font-size: 35px;
     font-family:'Times New Roman', Times, serif;
     text-align: center;
@@ -80,18 +80,25 @@ iframe {
 
 .navs {
     background-image: linear-gradient(to right, #1b3b80, #22468b, #295296, #305ea1, #386aac);
-    
-    
+    color: #007BFF;
     height: 50px;
     width: 250px;
     padding-top: 15px;
     text-align: center;
     text-decoration: none;
     font-size: 30px;
-    font-family:'Times New Roman', Times, serif;
-    
+    font-family:'Times New Roman', Times, serif;    
 }
 
 .navs:hover {
     color: white;
 }
+
+
+
+.navs:active {
+    font-weight: bold;
+    color: white; /* of jouw accentkleur */
+    border-bottom: 2px solid white;
+}
+
